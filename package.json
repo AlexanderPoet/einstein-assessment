@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "description": "config file parser",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node .",
-    "test": "jest"
+    "build": "babel index.js -d dist",
+    "start": "node ./dist",
+    "test": "jest ./tests"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/AlexanderPoet/einstein-assessment/issues"
   },
-  "homepage": "https://github.com/AlexanderPoet/einstein-assessment#readme"
+  "homepage": "https://github.com/AlexanderPoet/einstein-assessment#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "jest": "^27.4.5"
+  }
 }
